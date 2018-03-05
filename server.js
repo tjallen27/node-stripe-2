@@ -35,13 +35,8 @@ app.post('/charge', (req, res) => {
     email: email,
     source: stripeToken
   })
-  .then(customer => stripe.subscriptions.create({
-    customer: customer.id,
-    items: [
-      {
-        plan: 'standard'
-      }
-    ]
+  .then(customer => stripe.charge.create({
+    customer: customer.id
   }))
   .then(charge => res.render('success'));
 });
