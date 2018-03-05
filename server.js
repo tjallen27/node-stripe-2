@@ -35,7 +35,7 @@ app.post('/charge', (req, res) => {
     email: email,
     source: stripeToken
   })
-  .then(customer => stripe.charge.create({
+  .then(customer => stripe.charges.create({
     customer: customer.id
   }))
   .then(charge => res.render('success'));
