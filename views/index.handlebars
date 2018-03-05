@@ -1,0 +1,133 @@
+<header>
+  	<section class="view">
+  		<div class="full-bg-img header-container">
+  			<div class="container">
+  				<div class="row pt-5 mt-3">
+  					<div class="header-title">
+  					<h1 class="wow fadeIn" data-wow-delay="0.3s">
+  					Sample Packs
+  					</h1>
+  				</div>
+  				<div class="header-text">
+  					<span class="line wow fadeIn" data-wow-delay="0.3s"></span>
+  					<p class="wow fadeIn" data-wow-delay="0.3s">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt
+  					dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae
+  					iste.
+  				</p>
+  				<span class="line wow fadeIn" data-wow-delay="0.3s"></span>
+  					<button id="cta-listen" class="btn btn-outline-white font-bold wow fadeIn" data-wow-delay="0.3s"><a href="#why">Learn More</a>
+  					</button>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</section>
+	</header>
+
+		<main>
+
+			<section id="why" class="why text-center">
+					<h2 class="py-5 font-weight-bold">What's included in the pack?</h2>
+					<p class="px-5 mb-5 pb-3 lead grey-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+					aliqua. Ut enim ad minim veniam.</p>
+					<div class="row">
+					<div class="col-md-4">
+							<h5 class="font-weight-bold mt-3">Analytics</h5>
+							<p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti
+							hic.
+							</p>
+					</div>
+					<div class="col-md-4">
+							<h5 class="font-weight-bold mt-3">Tutorials</h5>
+							<p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti
+							hic.
+							</p>
+					</div>
+					<div class="col-md-4">
+							<h5 class="font-weight-bold mt-3">Support</h5>
+							<p class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit maiores nam, aperiam minima assumenda deleniti
+							hic.
+							</p>
+					</div>
+					</div>
+			</section>
+
+
+			<section id="player" class="player text-center">
+				<h2 class="py-5 font-weight-bold">Have a listen!</h2>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="container">
+							<div class="column add-bottom">
+								<div id="mainwrap">
+									<div id="audiowrap">
+										<div id="audio0">
+											<audio preload id="audio1" controls="controls" controlslist="nodownload">Your browser does not support HTML5 Audio!</audio>
+										</div>
+										</div>
+								<div id="plwrap">
+									<ul id="plList"></ul>
+								</div>
+							</div>
+						</div>
+			    </div>
+				</div>
+				<div class="col-md-6 text-justify">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+          <form action="/charge" method="POST">
+          <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{stripePublishableKey}}"
+            data-amount="999"
+            data-name="Example Checkout"
+            data-description="Example Download Pack"
+            data-locale="auto"
+            data-currency="gbp">
+          </script>
+          <script type="text/javascript">
+          // hide default stripe button
+          document.getElementsByClassName('stripe-button-el')[0].style.display = "none";
+          </script>
+          <button class="btn btn-buynow btn-outline-white" type="submit">Buy Now</button>
+				</div>
+			</div>
+			</section>
+
+			<section class="cta-buy text-center pb-3">
+				 <div class="row">
+						 <div class="col-md-12 mb-4">
+								 <div class="card card-image">
+										 <div class="text-center d-flex align-items-center py-5 px-4 rounded">
+												 <div>
+														 <h3 class="py-3 font-weight-bold">
+																 <strong>The boring bits...</strong>
+														 </h3>
+														 <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos. Odit sed qui, dolorum!
+														 </p>
+														 <button class="btn btn-outline-white">T&amp;C's</button>
+												 </div>
+										 </div>
+								 </div>
+						 </div>
+				 </div>
+			</section>
+
+
+
+
+
+		</main>
+		<footer class="page-footer font-small">
+				 <!--Copyright-->
+				 <div class="footer-copyright py-3 text-center">
+						 <div class="container-fluid">
+								 © 2015 Copyright: <a href="https://mdbootstrap.com/material-design-for-bootstrap/"> BadmasherMusic.com </a>
+						 </div>
+				 </div>
+		 </footer>
+
+		<!-- Initialise WOW.js -->
+		<script>
+				new WOW().init();
+		</script>

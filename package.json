@@ -1,0 +1,18 @@
+{
+  "name": "stripe",
+  "version": "1.0.0",
+  "description": "The aim of this project was to practice implementing Stripe API was well as practice NodeJS.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "stripe": "^5.4.0"
+  },
+  "devDependencies": {}
+}
