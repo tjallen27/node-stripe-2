@@ -36,7 +36,11 @@ app.post('/charge', (req, res) => {
     source: stripeToken
   })
   .then(customer => stripe.charges.create({
-    customer: customer.id
+    customer: customer.id,
+    amount: 999,
+    currency: 'gbp',
+    description: 'Example charge',
+    source: stripeToken
   }))
   .then(charge => res.render('success'));
 });
