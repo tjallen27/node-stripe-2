@@ -30,23 +30,19 @@ app.get('/', (req, res) => {
 app.post('/charge', (req, res) => {
   const stripeToken = req.body.stripeToken;
   const email = req.body.stripeEmail;
+  const amount = 999;
 
   stripe.customers.create({
     email: email,
     source: stripeToken
   })
   .then(customer => stripe.charges.create({
-    amount: 999,
+    amount,
+    description: 'Web Development Ebook',
     currency: 'gbp',
-    description: 'Example charge',
-    source: stripeToken
-  }, function(err, charge) {
-    console.log(err);
+    customer: customer.id
   }))
-  .then(customer => {
-    console.log(customer);
-  })
-  .then(charge => res.render('success'))
+  .then(charge => res.render('success'));
 });
 
 const port = process.env.PORT || 5000;
