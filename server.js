@@ -36,15 +36,17 @@ app.post('/charge', (req, res) => {
     source: stripeToken
   })
   .then(customer => stripe.charges.create({
-    customer: customer.id,
-    amount: amount,
-    currency: currency,
-    description: description
+    amount: 999,
+    currency: 'gbp',
+    description: 'Example charge',
+    source: stripeToken
+  }, function(err, charge) {
+    console.log(err);
   }))
   .then(customer => {
     console.log(customer);
   })
-  .then(charge => res.render('success'));
+  .then(charge => res.render('success'))
 });
 
 const port = process.env.PORT || 5000;
