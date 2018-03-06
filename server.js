@@ -32,16 +32,19 @@ app.post('/charge', (req, res) => {
   const email = req.body.stripeEmail;
   const amount = 999;
 
+  // create the customer
   stripe.customers.create({
     email: email,
     source: stripeToken
   })
+  // charge the customer
   .then(customer => stripe.charges.create({
     amount,
     description: 'Web Development Ebook',
     currency: 'gbp',
     customer: customer.id
   }))
+  // render complete page if charge is successful
   .then(charge => res.render('success'));
 });
 
