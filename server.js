@@ -35,15 +35,15 @@ app.post('/charge', (req, res) => {
     email: email,
     source: stripeToken
   })
+  .then(customer => stripe.charges.create({
+    customer: customer.id,
+    amount: amount,
+    currency: currency,
+    description: description
+  }))
   .then(customer => {
     console.log(customer);
   })
-  .then(customer => stripe.charges.create({
-    customer: customer.id,
-    amount: 999,
-    currency: 'gbp',
-    description: 'Example charge'
-  }))
   .then(charge => res.render('success'));
 });
 
